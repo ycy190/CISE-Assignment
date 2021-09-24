@@ -20,7 +20,7 @@ class MainPage extends Component {
                 <Nav className="me-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/search">Search</Nav.Link>
-                <Nav.Link href="#pricing">Upload</Nav.Link>
+                <Nav.Link href="/">Upload</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
