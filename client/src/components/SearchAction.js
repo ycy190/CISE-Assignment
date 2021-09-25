@@ -124,17 +124,33 @@ class SearchAction extends Component{
             </Navbar>
               <form onSubmit={this.handleSubmit}>
                   <label>
-                      search content:
-                      <textarea value={this.state.value} onChange={this.handleChange} />
-                      <select value={this.state.filter} onChange={this.handleFilterChange}>
-                          <option value="A">A</option>
-                          <option value="B">B</option>
-                          <option value="C">C</option>
-                          <option value="D">D</option>
-                      </select>
+                   
+                    
+                        
+                        <a style={bigFont}>Title:</a>
+                        <textarea className="col-lg-3" value={this.state.value} onChange={this.handleChange} />
+                     
+                   
+                        <a style={bigFont}>Isbn:</a>
+                        <textarea className="col-lg-3" value={this.state.isbn} onChange={this.handleIsbnChange} />
+             
+               
+                        <a style={bigFont}>Author:</a>
+                        <textarea  className="col-lg-3" value={this.state.author} onChange={this.handleAuthorChange} />
+                 
+                   
+                      
                   </label>
-                  <input type="submit" value="submit" />
+                    <select value={this.state.filter} onChange={this.handleFilterChange}>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                 
+                  <input style={marginLeft}  type="submit" value="submit" />
               </form>
+<<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
                 </Navbar>
@@ -181,6 +197,8 @@ class SearchAction extends Component{
                  
                   <input style={marginLeft}  type="submit" value="submit" />
               </form>
+=======
+>>>>>>> bacd4e8451bcc4087d9f514f36cf4d7b985a5d3f
               <div className="container">
                 <div className="row">
                   <div className="col-md-12">
@@ -201,8 +219,11 @@ class SearchAction extends Component{
                       {articleList}
                 </div>
               </div>
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 >>>>>>> search-feature
+=======
+>>>>>>> bacd4e8451bcc4087d9f514f36cf4d7b985a5d3f
             </>
           
         );

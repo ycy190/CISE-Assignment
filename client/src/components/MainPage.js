@@ -10,6 +10,7 @@ import Nav from 'react-bootstrap/Nav';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple } from '@mui/material/colors';
+<<<<<<< HEAD
 import { Dropdown } from 'semantic-ui-react'
 =======
 <<<<<<< Updated upstream
@@ -20,51 +21,27 @@ import { deepOrange, deepPurple } from '@mui/material/colors';
 import { Dropdown } from 'semantic-ui-react';
 >>>>>>> Stashed changes
 >>>>>>> search-feature
+=======
+import { Dropdown } from 'semantic-ui-react';
+>>>>>>> bacd4e8451bcc4087d9f514f36cf4d7b985a5d3f
 class MainPage extends Component {
     constructor(props) {
         super(props);
-        this.logout = this.logout.bind(this);
+        
     }
 
-    //handle profile click, which should allow user to jump to profile page
-    profileClick() {
-        window.alert("you will be redirected to profile page");
-    }
-    logout(e) {
-        window.alert("logging out!");
-
-        console.log("Logging out");
-    }
     render(){
         return(
-        <>
-            <Navbar bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand  href="/">SEPER</Navbar.Brand>
-                    <Nav className="mr-auto" >
-                    <Nav.Link  href="/">Home</Nav.Link>
-                    <Nav.Link  href="/search">Search</Nav.Link>
-                    <Nav.Link  href="/">Upload</Nav.Link>
-                    </Nav>
-                    <div onClick={this.profileClick}>
-                        <Avatar sx={{ bgcolor: deepOrange[500] }}>N</Avatar>   
-                    </div>
-                    <div>
-                        <Dropdown text='User name'>
-                            <Dropdown.Menu>
-                            <Dropdown.Item text='Browse profile' />
-                            <Dropdown.Item text='Edit profile' />
-                            <Dropdown.Item text='Logout' description='logout' />
-                            </Dropdown.Menu>
-                        </Dropdown>
-                        
-                    </div>
-                </Container>
-            </Navbar>
-                
-
-
-        </>
+        <Navbar bg="dark" variant="dark">
+            <Container>
+                <Navbar.Brand href="/">SEPER</Navbar.Brand>
+                <Nav className="me-auto">
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/search">Search</Nav.Link>
+                <Nav.Link href="#pricing">Upload</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
         );
     }
 }
