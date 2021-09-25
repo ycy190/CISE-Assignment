@@ -4,17 +4,19 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import ArticleCard from './ArticleCard';
 
+
 class ShowResearchList extends Component {
   constructor(props) {
     super(props);
     this.state = {
+     
       articles: []
     };
   }
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/articles')
+      .get('http://localhost:8082/api/articles/search/:q1/')
       .then(res => {
         this.setState({
           articles: res.data

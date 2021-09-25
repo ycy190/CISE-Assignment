@@ -20,6 +20,41 @@ router.get('/', (req, res) => {
     .catch(err => res.status(404).json({ noarticlesfound: 'No Articles found' }));
 });
 
+// @route GET api/articles/:q1 as queried
+// with query
+// @description Get articles that satisfied query
+// @access Public
+router.get('/search/:q1', (req, res) => {
+  //split query string by &
+  let s=[];
+  let searchQuery;
+  s = req.params.q1.split('&');
+  if(s[0] != '' && s[1] != '' && s[2] != ''){
+    searchQuery = {"title": s[0], "isbn": s[1], "author": s[2]};
+  }else if(s[0] == '' && s[1] == '' && s[2] == ''){
+    window.alert("You can not search with empty query");
+  }else if(s[0] != '' && s[1] == '' && s[2] == ''){
+    searchQuery = {"title": s[0]};
+  }else if(s[0] == '' && s[1] != '' && s[2] == ''){
+    searchQuery = {"isbn": s[1]};
+  }else if(s[0] == '' && s[1] == '' && s[2] != ''){
+    searchQuery = {"author": s[2]};
+  }else if(s[0] != '' && s[1] != '' && s[2] == ''){
+    searchQuery = {"title": s[0], "isbn": s[1]};
+  }else if(s[0] != '' && s[1] == '' && s[2] != ''){
+    searchQuery = {"title": s[0], "author": s[2]};
+  }else if(s[0] == '' && s[1] != '' && s[2] != ''){
+    searchQuery = {"isbn": s[1], "author": s[2]};
+  }
+  
+  //searchQuery = {"title": s[0],"author":s[1]};
+  Article.find(searchQuery)
+    .then(articles => res.json(articles))
+    .catch(err => res.status(404).json({ noarticlesfound: 'No Articles found' }));
+});
+
+
+
 // @route GET api/articles/:id
 // @description Get single article by id
 // @access Public
