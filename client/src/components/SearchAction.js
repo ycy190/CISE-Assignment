@@ -150,68 +150,12 @@ class SearchAction extends Component{
                   <input style={marginLeft}  type="submit" value="submit" />
               </form>
                 
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        search content:
-                        <textarea value={this.state.value} onChange={this.handleChange} />
-                        <select value={this.state.filter} onChange={this.handleFilterChange}>
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
-                            <option value="D">D</option>
-                        </select>
-                    </label>
-                    <input type="submit" value="submit" />
-                </form>
           
-              <form onSubmit={this.handleSubmit}>
-                  <label>
-                   
-                    
-                        
-                        <a style={bigFont}>Title:</a>
-                        <textarea className="col-lg-3" value={this.state.value} onChange={this.handleChange} />
-                     
-                   
-                        <a style={bigFont}>Isbn:</a>
-                        <textarea className="col-lg-3" value={this.state.isbn} onChange={this.handleIsbnChange} />
-             
-               
-                        <a style={bigFont}>Author:</a>
-                        <textarea  className="col-lg-3" value={this.state.author} onChange={this.handleAuthorChange} />
-                 
-                   
-                      
-                  </label>
-                    <select value={this.state.filter} onChange={this.handleFilterChange}>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                        <option value="D">D</option>
-                    </select>
-                 
-                  <input style={marginLeft}  type="submit" value="submit" />
-              </form>
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-12">
-                    <br />
-                    <h2 className="display-4 text-center">My Library</h2>
-                  </div>
 
-                  <div className="col-md-11">
-                    
-                    <br />
-                    <br />
-                    <hr />
-                  </div>
-
-                </div>
-
-                <div className="list">
-                      {articleList}
-                </div>
+              <div className="list">
+                    {articleList}
               </div>
+              
 
             </>
           
