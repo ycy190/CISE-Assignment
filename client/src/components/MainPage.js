@@ -53,7 +53,8 @@ class MainPage extends Component {
             </Navbar>
                 
 
-
+            <h1>SEPER System</h1>
+            
         </>
         );
     }
