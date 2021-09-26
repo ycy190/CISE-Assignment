@@ -120,7 +120,6 @@ class SearchAction extends Component{
                         
                     </div>
                 </Container>
-<<<<<<< HEAD
             </Navbar>
               <form onSubmit={this.handleSubmit}>
                   <label>
@@ -150,10 +149,7 @@ class SearchAction extends Component{
                  
                   <input style={marginLeft}  type="submit" value="submit" />
               </form>
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-                </Navbar>
+                
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         search content:
@@ -167,8 +163,7 @@ class SearchAction extends Component{
                     </label>
                     <input type="submit" value="submit" />
                 </form>
-=======
-            </Navbar>
+          
               <form onSubmit={this.handleSubmit}>
                   <label>
                    
@@ -197,8 +192,6 @@ class SearchAction extends Component{
                  
                   <input style={marginLeft}  type="submit" value="submit" />
               </form>
-=======
->>>>>>> bacd4e8451bcc4087d9f514f36cf4d7b985a5d3f
               <div className="container">
                 <div className="row">
                   <div className="col-md-12">
@@ -219,11 +212,7 @@ class SearchAction extends Component{
                       {articleList}
                 </div>
               </div>
-<<<<<<< HEAD
->>>>>>> Stashed changes
->>>>>>> search-feature
-=======
->>>>>>> bacd4e8451bcc4087d9f514f36cf4d7b985a5d3f
+
             </>
           
         );

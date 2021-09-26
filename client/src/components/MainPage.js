@@ -6,24 +6,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 
-<<<<<<< HEAD
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple } from '@mui/material/colors';
-<<<<<<< HEAD
 import { Dropdown } from 'semantic-ui-react'
-=======
-<<<<<<< Updated upstream
-=======
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
-import { deepOrange, deepPurple } from '@mui/material/colors';
-import { Dropdown } from 'semantic-ui-react';
->>>>>>> Stashed changes
->>>>>>> search-feature
-=======
-import { Dropdown } from 'semantic-ui-react';
->>>>>>> bacd4e8451bcc4087d9f514f36cf4d7b985a5d3f
+
 class MainPage extends Component {
     constructor(props) {
         super(props);
