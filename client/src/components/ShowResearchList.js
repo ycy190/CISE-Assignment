@@ -16,7 +16,7 @@ class ShowResearchList extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/articles/search/:q1/')
+      .get('https://sepersystem.herokuapp.com/api/articles/search/:q1/')
       .then(res => {
         this.setState({
           articles: res.data
