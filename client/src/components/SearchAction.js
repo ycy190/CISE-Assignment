@@ -23,7 +23,7 @@ class SearchAction extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            value: '',
+            title: '',
             isbn: '',
             author: '',
             filter: 'A',
@@ -40,7 +40,7 @@ class SearchAction extends Component{
       }
     
       handleChange(event) {
-        this.setState({value: event.target.value});
+        this.setState({title: event.target.value});
       }
       
       handleIsbnChange(event){
@@ -68,7 +68,7 @@ class SearchAction extends Component{
         // + searchQuery;
         // + filter;
         axios
-            .get('https://sepersystem.herokuapp.com/api/articles/search/'+this.state.value+ '&' +this.state.isbn + '&'+this.state.author)
+            .get('https://sepersystem.herokuapp.com/api/articles/search/'+this.state.title+ '&' +this.state.isbn + '&'+this.state.author)
         .then(res => {
           this.setState({
             articles: res.data
@@ -127,7 +127,7 @@ class SearchAction extends Component{
                     
                         
                         <a style={bigFont}>Title:</a>
-                        <textarea className="col-lg-3" value={this.state.value} onChange={this.handleChange} />
+                        <textarea className="col-lg-3" value={this.state.title} onChange={this.handleChange} />
                      
                    
                         <a style={bigFont}>Isbn:</a>
