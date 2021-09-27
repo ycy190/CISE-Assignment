@@ -9,6 +9,49 @@ test('render main page', () => {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 test('render search page', () => {
   render(<SearchAction />);
   const TitleText = screen.getByText(/Title:/i);
@@ -17,5 +60,15 @@ test('render search page', () => {
   expect(IsbnText).toBeInTheDocument();
   const AuthorText = screen.getByText(/Author:/i);
   expect(AuthorText).toBeInTheDocument();
+
+
+
+
+
+
+
+
+
+  
 });
 

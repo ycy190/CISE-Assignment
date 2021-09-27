@@ -13,7 +13,7 @@ import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple } from '@mui/material/colors';
 import { Dropdown } from 'semantic-ui-react';
 
-class Upload extends components{
+class Upload extends Component{
     //implement normal user's upload action
     
     constructor(props) {
@@ -25,7 +25,7 @@ class Upload extends components{
             description:'',
             content:'',
             uploader:'',
-            
+            type:'pending'
         }
 
     }
@@ -41,11 +41,12 @@ class Upload extends components{
         author: this.state.author,
         description: this.state.description,
         content: this.state.content,
-        uploader: this.state.uploader
+        uploader: this.state.uploader,
+        type: this.state.type
     };
 
     axios
-        .post('https://sepersystem.herokuapp.com/api/articles/', data)
+        .post(' https://sepersystem.herokuapp.com/api/articles/', data)
         .then(res => {
         
         this.setState({
@@ -54,7 +55,8 @@ class Upload extends components{
             author:'',
             description:'',
             content:'',
-            uploader:''
+            uploader:'',
+            type:'pending'
         });
         this.props.history.push('/');
         })
@@ -74,7 +76,9 @@ class Upload extends components{
                     <Nav className="mr-auto" >
                     <Nav.Link  href="/">Home</Nav.Link>
                     <Nav.Link  href="/search">Search</Nav.Link>
-                    <Nav.Link  href="/">Upload</Nav.Link>
+                    <Nav.Link  href="/upload">Upload</Nav.Link>
+                    <Nav.Link  href="/moderator">Moderator</Nav.Link>
+                    <Nav.Link  href="/analyzer">Analyzer</Nav.Link>
                     </Nav>
                     <div onClick={this.profileClick}>
                         <Avatar sx={{ bgcolor: deepOrange[500] }}>N</Avatar>   

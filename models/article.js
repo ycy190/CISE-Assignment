@@ -40,7 +40,12 @@ const ArticleSchema = new mongoose.Schema({
     //when does the request been accepted from queue by analyzer
     type: Date,
     require: Date.now
+  },
+  type:{
+    type: String,
+    require: true
   }
+
   
 });
 

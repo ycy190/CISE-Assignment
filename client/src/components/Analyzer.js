@@ -13,7 +13,9 @@ import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple } from '@mui/material/colors';
 import { Dropdown } from 'semantic-ui-react';
 
-class Queue extends components{
+class Moderator extends Component{
+    //showing analyzer view for moderators
+    //should show only one pending element unitl hit the button to try to get another pending article
     
 }
-export default Queue;
+export default Moderator;
