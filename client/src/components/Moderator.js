@@ -22,7 +22,7 @@ class Moderator extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            value: '',
+            title: '',
             isbn: '',
             author: '',
          
