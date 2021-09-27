@@ -7,6 +7,9 @@ import './App.css';
 import MainPage from './components/MainPage';
 import ShowResearchList from './components/ShowResearchList';
 import SearchAction from './components/SearchAction';
+import Upload from './components/Upload';
+import Moderator from './components/Moderator';
+import Analyzer from './components/Analyzer';
 
 class App extends Component {
   render() {
@@ -15,7 +18,12 @@ class App extends Component {
         <div>
           <Route exact path='/' component={MainPage} />
           <Route path='/search' component={SearchAction}/>
+          <Route path='/upload' component={Upload}/>
+          <Route path='/moderator' component={Moderator}/>
+          <Route path='/analyzer' component={Analyzer}/>
+
           <Route path='/show-research-list' component={ShowResearchList}/>
+
         </div>
       </Router>
     );
