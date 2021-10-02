@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import axios from 'axios';
-import ArticleCard from './ArticleCard';
+import ArticleModeratorCard from './ArticleModeratorCard';
 
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
@@ -77,7 +77,7 @@ class Moderator extends Component{
             articleList = "there is no article record!";
         } else {
           articleList = articles.map((article, k) =>
-            <ArticleCard article={article} key={k} />
+            <ArticleModeratorCard article={article} key={k} />
           );
         }
         return (
@@ -134,6 +134,7 @@ class Moderator extends Component{
 
               <div className="list">
                     {articleList}
+                    
               </div>
               
 

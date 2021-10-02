@@ -5,11 +5,11 @@ import './App.css';
 
 
 import MainPage from './components/MainPage';
-import ShowResearchList from './components/ShowResearchList';
 import SearchAction from './components/SearchAction';
 import Upload from './components/Upload';
 import Moderator from './components/Moderator';
 import Analyzer from './components/Analyzer';
+import ShowArticle from './components/ShowArticle';
 
 class App extends Component {
   render() {
@@ -21,8 +21,8 @@ class App extends Component {
           <Route path='/upload' component={Upload}/>
           <Route path='/moderator' component={Moderator}/>
           <Route path='/analyzer' component={Analyzer}/>
+          <Route path='/show-article/:id' component={ShowArticle}/>
 
-          <Route path='/show-research-list' component={ShowResearchList}/>
 
         </div>
       </Router>

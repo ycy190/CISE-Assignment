@@ -62,7 +62,7 @@ class SearchAction extends Component{
         
         // + searchQuery;
         axios
-            .get(' https://sepersystem.herokuapp.com/api/articles/search/'+this.state.title+ '&' +this.state.isbn + '&'+this.state.author)
+            .get('https://sepersystem.herokuapp.com/api/articles/search/'+this.state.title+ '&' +this.state.isbn + '&'+this.state.author)
         .then(res => {
           this.setState({
             articles: res.data
