@@ -6,25 +6,10 @@ import axios from 'axios';
 const ArticleModeratorCard = (props) => {
     const  article  = props.article;
     const acceptedArticle = {
-        title: props.article.title,
-        isbn: props.article.isbn,
-        author: props.article.author,
-        description: props.article.description,
-        uploader: props.article.uploader,
-        content: props.article.content,
-        uploadDate:props.article.uploadDate,
-        uploadAcceptDate: props.article.uploadAcceptDate,
+      
         type:'processing'
-      };
+      };  
     const rejectedArticle = {
-        title: props.article.title,
-        isbn: props.article.isbn,
-        author: props.article.author,
-        description: props.article.description,
-        uploader: props.article.uploader,
-        content: props.article.content,
-        uploadDate:props.article.uploadDate,
-        uploadAcceptDate: props.article.uploadAcceptDate,
         type:'reject'
       };
 
