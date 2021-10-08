@@ -44,7 +44,17 @@ const ArticleSchema = new mongoose.Schema({
   type:{
     type: String,
     require: true
+  },
+  rate:{
+    type: String,
+  },
+  rateSum:{
+    type: String,
+  },
+  rateTimes:{
+    type: String,
   }
+
 
   
 });
