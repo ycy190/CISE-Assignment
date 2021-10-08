@@ -84,6 +84,9 @@ class SearchAction extends Component{
         const marginLeft={
           marginLeft:6,
         }
+        const centerlize={
+          "text-align": "center",
+        }
         if(!articles) {
             articleList = "there is no article record!";
         } else {
@@ -117,7 +120,8 @@ class SearchAction extends Component{
                     </div>
                 </Container>
             </Navbar>
-              <form onSubmit={this.handleSubmit}>
+            <h3 style={centerlize}>Search page </h3>
+              <form style={centerlize}onSubmit={this.handleSubmit}>
                   <label>
                    
                     

@@ -73,6 +73,9 @@ class Moderator extends Component{
         const marginLeft={
           marginLeft:6,
         }
+        const centerlize={
+          "text-align": "center",
+        }
         if(!articles) {
             articleList = "there is no article record!";
         } else {
@@ -106,7 +109,9 @@ class Moderator extends Component{
                     </div>
                 </Container>
             </Navbar>
-              <form onSubmit={this.handleSubmit}>
+            <h3 style={centerlize}>Moderator page </h3>
+
+              <form style={centerlize} onSubmit={this.handleSubmit}>
                   <label>
                    
                     

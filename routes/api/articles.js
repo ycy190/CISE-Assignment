@@ -20,6 +20,16 @@ router.get('/', (req, res) => {
     .catch(err => res.status(404).json({ noarticlesfound: 'No Articles found' }));
 });
 
+
+// @route GET next api/articles
+// @description Get next article for analysing
+// @access Public
+router.get('/findNextArticle', (req, res) => {
+  Article.findOne({"type": 'processing'})
+    .then(articles => res.json(articles))
+    .catch(err => res.status(404).json({ noarticlesfound: 'No Article found to analyze' }));
+});
+
 // @route GET api/articles/:q1 as queried
 // with query
 // @description Get articles that satisfied query
